@@ -22,6 +22,10 @@ $ kill {process ID}
 
 If the process is not killed, use kill -9 {process ID}
 
+## Test Account
+email:"nilson@email.com"
+password:"nilson"
+
 ## Tolls
 
 The tools that are used to build this application include:
