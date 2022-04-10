@@ -1,7 +1,32 @@
-# Vue 3 + Vite
+# Food Journal App
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+This App is a simple journal application for personal use to record of culinary experiences.
 
-## Recommended IDE Setup
+## How to start
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+Before starting, make sure you have node.js installed and use as following to run the application:
+1. Clone application to computer
+$ git clone https://github.com/learnpytest/food-journal-vue3-April2022.git
+$ cd food-journal-vue3-April2022/
+$ npm install
+
+2. Run json server in background
+$ node json-server.js &
+
+3. Start application
+$ npm run dev
+
+4. Kill process that is running json server if you stop running the application
+$ ps
+$ kill {process ID}
+
+If the process is not killed, use kill -9 {process ID}
+
+## Tolls
+
+The tools that are used to build this application include:
+- Vue 3
+- Vite
+- Bootstrap/Bootstrap icons
+- SCSS
+- HTML5
