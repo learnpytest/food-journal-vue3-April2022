@@ -26,7 +26,7 @@ If the process is not killed, use kill -9 {process ID}
 email:"nilson@email.com"
 password:"nilson"
 
-## Tolls
+## Tools
 
 The tools that are used to build this application include:
 - Vue 3
