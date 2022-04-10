@@ -1,0 +1,1 @@
+import{_ as t,o as r,c as a,e as o}from"./index.47c71654.js";const n={name:"PrimaryButtonLarge"},s={class:"button button--large"};function _(e,c,u,d,p,i){return r(),a("button",s,[o(e.$slots,"default",{},void 0,!0)])}var f=t(n,[["render",_],["__scopeId","data-v-57b536fe"]]);export{f as P};
