@@ -15,12 +15,12 @@
 </template>
 
 <script>
-// import AccountForm from "../components/Forms/AccountForm.vue";
+import AccountForm from "../components/Forms/AccountForm.vue";
 
 export default {
   name: "SignUp",
   components: {
-    // AccountForm,
+    AccountForm,
   },
 };
 </script>

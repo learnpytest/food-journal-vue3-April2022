@@ -60,6 +60,7 @@ export default {
       isLoading: false,
     });
 
+   // TODO add errorMsg to view notification
     const errorMsg = ref('登入失敗');
 
     // some functions
@@ -71,7 +72,6 @@ export default {
       }
 
       try {
-        console.log(user.email, user.password)
         const res = await signingApi.signIn(user.email, user.password);
         const { statusText, data } = res;
         console.log(res)

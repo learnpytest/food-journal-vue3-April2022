@@ -50,7 +50,10 @@
 
 <script>
 import axios from "axios";
-import PrimaryButtonLarge from "../../components/Buttons/PrimaryButtonLarge.vue";
+import { LOCALSTORAGE_KEY } from "../../configs/config";
+import signUpApi from "../../apis/signUp/signUp";
+
+import PrimaryButtonLarge from "../Buttons/PrimaryButtonLarge.vue";
 
 import { ref } from "vue";
 import { useRouter } from "vue-router";
@@ -64,7 +67,9 @@ export default {
     const signUpUserAccount = ref("");
     const signUpUserEmail = ref("");
     const signUpUserPassword = ref("");
-    const errorMsg = ref(null);
+
+    // TODO add errorMsg to view notification
+    const errorMsg = ref("註冊失敗");
 
     // some functions
     const SignUp = async () => {
@@ -79,14 +84,14 @@ export default {
       }
 
       try {
-        const res = await axios.post("http://localhost:3000/users", {
+        const res = await signUpApi.signUp({
           email: signUpUserEmail.value,
           account: signUpUserAccount.value,
           password: signUpUserPassword.value,
-        });
-        if (res.status === 201) {
+        })
+        if (res.statusText === 'OK') {
           alert("註冊成功");
-          router.push("/");
+          router.push("/signin");
         }
         signUpUserEmail.value = "";
         signUpUserAccount.value = "";
@@ -120,7 +125,7 @@ export default {
   flex-direction: column;
   align-items: center;
   margin-top: 4rem;
-    .form__logo {
+  .form__logo {
     font-size: 3rem;
     color: $yellow;
   }
